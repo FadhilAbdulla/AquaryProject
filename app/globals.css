@@ -2,24 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/my-custom-font.woff2') format('woff2'),
+       url('/fonts/my-custom-font.woff') format('woff');
+  /* Add additional font formats if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 255,102,255;
+  --background-end-rgb: 128,51,255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 102,50,50;
+    --background-end-rgb: 128,51,255;
   }
 }
-
+/* }
+ff66ff
+8033ff */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
+      to right,
       transparent,
       rgb(var(--background-end-rgb))
     )
@@ -31,3 +42,70 @@ body {
     text-wrap: balance;
   }
 }
+.MainPagedesign {
+  padding: 20px;
+}
+.BlockPageHeading{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-decoration-line: underline;
+}
+.PostTitle{
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: rgb(141, 41, 19);
+}
+.PostBody{
+ padding-top: 10px;
+ color: rgb(4, 27, 78);
+}
+.mt-8{
+  margin-top: 20px;
+}
+.CommentPageHeading{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  text-decoration-line: underline;
+  color: rgb(239, 255, 231);
+}
+.IndividualPostTitle{
+  font-size: 40px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-align: center;
+  color: rgb(188, 255, 152);
+  
+
+}
+
+.IndividualPostBody{
+  padding-top: 10px;
+  font-size: 25px;
+  color: rgb(203, 255, 199);
+ }
+
+ .CommentTitle{
+  font-size: 18px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-family: 'MyCustomFont', Arial, sans-serif;
+  padding-top: 10px;
+  color: rgb(22, 62, 0);
+ }
+ .CommentEmail{
+  font-size: 15px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-family: 'MyCustomFont', Arial, sans-serif;
+  padding-top: 10px;
+  color: rgb(0, 0, 0);
+ }
+ .CommentBody{
+  padding-top: 10px;
+  color: rgb(22, 1, 46);
+ }
